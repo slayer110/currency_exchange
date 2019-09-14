@@ -2,6 +2,7 @@
 <head>
     <title>
     </title>
+    <link rel="stylesheet" href="assets/style.css" type="text/css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -16,16 +17,29 @@
 </head>
 <body>
 <header>
-    Курсы валют
+    <h1>Курсы валют</h1>
 </header>
 <main>
-<form class="form-inline">
-    <select id="currency">
-    </select>
-    <input type="text" id="sale"><label for="sale">Lorem</label>
-    <input type="text" id="puchase"> <label for="puchase">Lorem</label>
-</form>
+    <div class="newCurrency">
+        <span><h2>Добавление новой валюты</h2></span>
+        <form>
+            <div class="field">
+                <label for="currency">Код валюты</label>
+                <select id="currency">
+                </select>
+            </div>
+            <div class="field">
+                <label for="sale">Продажа</label><input type="text" id="sale">
+            </div>
+            <div class="field"><label for="purchase">Покупка</label><input type="text" id="purchase">
+            </div>
+            <div class="field"><input type="submit" value="Сохранить"></div>
+        </form>
+    </div>
 </main>
-<script src="currency.js"></script>
+<footer>
+
+</footer>
+<script src="assets/js/index.js"></script>
 </body>
 </html>
