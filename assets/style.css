@@ -26,29 +26,39 @@ footer {
     margin: 0 auto;
     width: 30%;
 }
-form{
+
+form {
     height: 50%;
     border: 2px grey solid;
     box-shadow: 0 0 10px 1px;
 }
-span{
+
+span {
     text-align: center;
     color: red;
 }
-.field span{
+
+.field span {
     color: black;
 }
+
 div.field {
     padding-top: 21px;
     padding-left: 10px;
 }
+
 div.field label {
     display: block;
     float: left;
     width: 106px;
     height: 15px;
 }
-.exchangeRate{
+
+.exchangeRate {
     width: 50%;
-    margin: 0 auto;
+    margin: 142px auto 0;
+}
+
+.editCurrency h4 {
+    margin: 0 auto
 }

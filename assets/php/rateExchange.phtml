@@ -1,5 +1,5 @@
 <?php
 include 'connection.phtml';
-$stm = $pdo->query('SELECT * FROM currency INNER JOIN exchange_rates')->fetchAll(PDO::FETCH_ASSOC);
+$stm = $pdo->query('SELECT  e.id,cur.code,e.currency_id,e.purchase,e.sale FROM currency as cur INNER JOIN exchange_rates as e ON cur.id=e.currency_id')->fetchAll(PDO::FETCH_ASSOC);
 echo json_encode($stm);
 
