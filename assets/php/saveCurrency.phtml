@@ -1,9 +1,9 @@
 <?php
 include 'connection.phtml';
 $data = json_decode(file_get_contents('php://input'), true);
-
-$sale=$data['saleVal'];
-$purchase=$data['purchaseVal'];
-$sql='INSERT INTO exchange_rates VALUES (NULL,3,'.$sale.','.$purchase.')';
-$rows=$pdo->exec($sql);
+$sale = $data['saleVal'];
+$purchase = $data['purchaseVal'];
+$id_currency = $data['currencyVal'];
+$sql = 'INSERT INTO exchange_rates VALUES (NULL,' . $id_currency . ',' . $sale . ',' . $purchase . ')';
+$rows = $pdo->exec($sql);
 ?>

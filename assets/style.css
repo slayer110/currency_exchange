@@ -48,3 +48,7 @@ div.field label {
     width: 106px;
     height: 15px;
 }
+.exchangeRate{
+    width: 50%;
+    margin: 0 auto;
+}
