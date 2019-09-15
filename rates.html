@@ -18,10 +18,43 @@
 </head>
 <body>
 <header>
-    <h1>Валютно-обменные операция</h1>
+    <h1>Курсы валют</h1>
 </header>
 <main>
     <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Редактирование курса</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="field">
+                        <label>
+                            Валюта
+                        </label>
+                        <span id="cur">
+
+                        </span>
+                    </div>
+                    <div class="field">
+                        <label for="sale">Продажа</label><input type="text" id="sale">
+                    </div>
+                    <div class="field">
+                        <label for="purchase">Покупка</label><input type="text" id="purchase">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Сохранить</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"-->
     <!--aria-hidden="true">-->
     <!--<div class="modal-dialog modal-sm">-->
