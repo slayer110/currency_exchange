@@ -2,7 +2,7 @@
 <head>
     <title>
     </title>
-    <link rel="stylesheet" href="assets/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../style.css" type="text/css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -21,20 +21,51 @@
     <h1>Отчёт по операциям</h1>
 </header>
 <main>
-    <a href="index.html">
+    <a href="/index.html">
         На главную
     </a>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Редактирование курса</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="field">
+                        <label>
+                            Валюта
+                        </label>
+                        <span id="cur">
 
-    <div class="exchangeRate" id="reportRateTable_3">
+                        </span>
+                    </div>
+                    <div class="field">
+                        <label for="sale">Продажа</label><input type="text" id="sale">
+                    </div>
+                    <div class="field">
+                        <label for="purchase">Покупка</label><input type="text" id="purchase">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Сохранить</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="exchangeRate" id="reportRateTable_4">
         <table class="table">
             <thead class="thead-dark">
             <tr>
-                <th scope="col">#</th>
                 <th scope="col">Название</th>
-                <th scope="col">Продажа</th>
-                <th scope="col">Покупка</th>
-                <th scope="col">Время</th>
-                <th></th>
+                <th scope="col">Всего продано</th>
+                <th scope="col">На сумму</th>
+                <th scope="col">Всего куплено</th>
+                <th scope="col">На сумму</th>
             </tr>
             </thead>
             <tbody>
@@ -45,6 +76,6 @@
 <footer>
 
 </footer>
-<script src="assets/js/rates.js"></script>
+<script src="../js/reports/operations.js"></script>
 </body>
 </html>

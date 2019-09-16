@@ -1,5 +1,5 @@
 <?php
-include 'connection.phtml';
+include 'connection.php';
 $data = json_decode(file_get_contents('php://input'), true);
 $sale = $data['saleVal'];
 $purchase = $data['purchaseVal'];

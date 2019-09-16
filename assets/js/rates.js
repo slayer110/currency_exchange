@@ -8,7 +8,7 @@ const tableOfCurrency = document.getElementsByClassName('table')[0].getElementsB
 
 //сохранение курса валюты
 updateListRates = () => {
-  fetch('http://exchange.vi/assets/php/rateExchange.phtml').then(result => result.json())
+  fetch('http://exchange.vi/assets/php/rateExchange.php').then(result => result.json())
     .then(rates => {
       tableOfCurrency.innerHTML = "";
       rates.forEach(elem => {
@@ -44,7 +44,7 @@ buttonSaveEdit.addEventListener('click', (e) => {
     saveQuery = undefined
   }
   e.preventDefault();
-  saveQuery = fetch('http://exchange.vi/assets/php/saveCurrency.phtml', {
+  saveQuery = fetch('http://exchange.vi/assets/php/saveCurrency.php', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',

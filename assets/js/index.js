@@ -7,7 +7,7 @@ const amount = document.getElementById('amount');
 const sum = document.getElementById('sum');
 
 //Подключение списка валют в выпадающий список
-fetch('http://exchange.vi/assets/php/rateExchange.phtml').then(res => res.json())
+fetch('http://exchange.vi/assets/php/rateExchange.php').then(res => res.json())
   .then(list => {
     list.forEach((elem) => {
       selectCur.appendChild(new Option(elem['code'], elem['currency_id']))
@@ -47,7 +47,7 @@ calculation.addEventListener('click', () => {
     return
   }
   amount.innerText = sum.value * rate.innerText;
-  fetch('http://exchange.vi/assets/php/logOperations.phtml', {
+  fetch('http://exchange.vi/assets/php/logOperations.php', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',

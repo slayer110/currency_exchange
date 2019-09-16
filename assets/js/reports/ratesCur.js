@@ -1,7 +1,7 @@
 const logCurrency = document.getElementsByClassName('table')[0].getElementsByTagName('tbody')[0];
 const RateMaxMin = document.getElementsByClassName('table')[1].getElementsByTagName('tbody')[0];
 const RateAvg = document.getElementsByClassName('table')[2].getElementsByTagName('tbody')[0];
-fetch('http://exchange.vi/assets/php/reportsRate.phtml').then(result => result.json())
+fetch('http://exchange.vi/assets/php/reportsRate.php').then(result => result.json())
   .then(rates => {
     logCurrency.innerHTML = "";
     rates['log'].forEach(elem => {
