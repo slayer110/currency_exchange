@@ -26,9 +26,9 @@ updateListRates = () => {
         td.innerHTML = '<i class="fas fa-pen" style="color: blue;cursor: pointer" data-toggle="modal" data-target="#exampleModal"></i>';
         td.addEventListener('click', (e) => {
           const curId = e.target.parentElement.parentElement;
-          editCur.innerText = curId.cells[1].innerText;
-          editRateSale.value = curId.cells[2].innerHTML;
-          editRatePurchase.value = curId.cells[3].innerHTML;
+          editCur.innerText = curId.cells[0].innerText;
+          editRateSale.value = curId.cells[1].innerHTML;
+          editRatePurchase.value = curId.cells[2].innerHTML;
           editRatePurchase.setAttribute('curId', curId.getAttribute('curId'))
         });
         tr.appendChild(td);
