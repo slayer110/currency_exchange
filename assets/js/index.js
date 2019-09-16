@@ -18,7 +18,7 @@ fetch('http://exchange.vi/assets/php/rateExchange.phtml').then(res => res.json()
           let row = list.filter((elem) => {
             return parseInt(elem['currency_id']) === parseInt(selectCur.options[i].value)
           });
-          rate.setAttribute('id_cur',row[0].id)
+          rate.setAttribute('id_cur', row[0].id);
           switch (typeRate.value) {
             case 'sale':
               rate.innerHTML = row[0]['sale'];
@@ -43,6 +43,9 @@ fetch('http://exchange.vi/assets/php/rateExchange.phtml').then(res => res.json()
 
 //расчёт
 calculation.addEventListener('click', () => {
+  if (sum.value == "") {
+    return
+  }
   amount.innerText = sum.value * rate.innerText;
   fetch('http://exchange.vi/assets/php/logOperations.phtml', {
     method: 'POST',
@@ -53,8 +56,9 @@ calculation.addEventListener('click', () => {
       exchange_id: rate.getAttribute('id_cur'),
       amountVal: sum.value,
       typeVal: typeRate.value,
-    })
-  })
+      sumVal: amount.innerText
+})
+})
 });
 sum.addEventListener('focus', () => {
   amount.innerText = '';
