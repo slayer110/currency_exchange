@@ -62,3 +62,7 @@ div.field label {
 .editCurrency h4 {
     margin: 0 auto
 }
+li{
+    display: inline;
+    width: 220px;
+}

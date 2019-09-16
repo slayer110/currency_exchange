@@ -48,23 +48,19 @@
     <!--<div class="field"><input type="submit" value="Сохранить"></div>-->
     <!--</form>-->
     <!--</div>-->
-    <div class="exchangeRate">
-        <table class="table">
-            <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Название</th>
-                <th scope="col">Продажа</th>
-                <th scope="col">Покупка</th>
-                <th scope="col">Время</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </div>
-
+    <ul>
+        <li class="list-group-item"><label for="currency">Код валюты:</label>
+            <select id="currency">
+            </select>
+        </li>
+        <li class="list-group-item"><label for="rate">Курс валюты:</label><span id="rate"></span></li>
+        <li class="list-group-item"><label for="type">Тип операции:</label><select id="type">
+            <option value="sale">Покупка</option>
+            <option value="purchase">Продажа</option>
+        </select></li>
+        <li class="list-group-item"><label for="sum">Сумма:</label><input type="text" id="sum"></li>
+        <li class="list-group-item"><label for="amount">Итог:</label><input type="text" id="amount"></li>
+    </ul>
 </main>
 <footer>
 
