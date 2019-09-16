@@ -1,9 +1,9 @@
 <?php
 include 'connection.php';
-$sale = $pdo->query('SELECT cur.code,SUM(op.amount) as amountSale,SUM(op.sum) as sumSale FROM currency as cur 
+$sale = $pdo->query('SELECT cur.code,SUM(op.amount) as amountSale,SUM(op.amount)*e.sale as sumSale FROM currency as cur 
 INNER JOIN exchange_rates as e ON cur.id=e.currency_id INNER JOIN operations as op ON e.id=op.exchange_id WHERE op.type="sale" GROUP BY cur.code')->fetchAll(PDO::FETCH_ASSOC);
 
-$purchase = $pdo->query('SELECT cur.code,SUM(op.amount) as amountPurchase,SUM(op.sum) as sumPurchase FROM currency as cur 
+$purchase = $pdo->query('SELECT cur.code,SUM(op.amount) as amountPurchase,SUM(op.amount)*e.purchase as sumPurchase FROM currency as cur 
 INNER JOIN exchange_rates as e ON cur.id=e.currency_id INNER JOIN operations as op ON e.id=op.exchange_id WHERE op.type="purchase" GROUP BY cur.code')->fetchAll(PDO::FETCH_ASSOC);
 
 $array = array(

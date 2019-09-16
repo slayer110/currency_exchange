@@ -57,8 +57,8 @@ calculation.addEventListener('click', () => {
       amountVal: sum.value,
       typeVal: typeRate.value,
       sumVal: amount.innerText
-})
-})
+    })
+  })
 });
 sum.addEventListener('focus', () => {
   amount.innerText = '';

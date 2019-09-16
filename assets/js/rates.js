@@ -14,7 +14,7 @@ updateListRates = () => {
       rates.forEach(elem => {
         const tr = document.createElement('tr');
         for (let i in elem) {
-          if (i === 'currency_id') {
+          if (i === 'currency_id'|| i==='id') {
             tr.setAttribute('curId', elem[i]);
             continue
           }
