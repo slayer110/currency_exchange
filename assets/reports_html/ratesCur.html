@@ -19,26 +19,55 @@
 <body>
 <header>
     <h1>Отчёт по курсам валют</h1>
+    <!--<a href="../../index.html">-->
+        <!--На главную-->
+    <!--</a>-->
 </header>
 <main>
-    <a href="../../index.html">
-        На главную
-    </a>
-    <div class="exchangeRate">
-        <table class="table">
-            <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Название</th>
-                <th scope="col">Продажа</th>
-                <th scope="col">Покупка</th>
-                <th scope="col">Время</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+    <div id="reportsForRate">
+        <div class="exchangeRate" id="reportRateTable_1">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Название</th>
+                    <th scope="col">Продажа</th>
+                    <th scope="col">Покупка</th>
+                    <th scope="col">Время</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="exchangeRate" id="reportRateTable_2">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Название</th>
+                    <th colspan="2" scope="col">Продажа(MAX)(MIN)</th>
+                    <th сolspan="2"scope="col">Покупка(MAX)(MIN)</th>
+                    <th ></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="exchangeRate" id="reportRateTable_3">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Название</th>
+                    <th scope="col">Продажа СР</th>
+                    <th scope="col">Покупка СР</th>
+                    <th ></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </div>
 </main>
 <footer>

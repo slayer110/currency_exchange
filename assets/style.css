@@ -88,23 +88,50 @@ li input {
     text-align: center;
     margin-top: 169px;
 }
-#links li{
+
+#links li {
     display: block;
 }
-.list-group li{
+
+.list-group li {
     width: 50%;
     margin: 0 auto;
 }
-.list-group li:hover{
+
+.list-group li:hover {
     background-color: #007bff;
 }
-.list-group a{
+
+.list-group a {
     color: black;
 }
-.list-group a:active{
+
+.list-group a:active {
     color: black;
 }
-.list-group a:hover{
+
+.list-group a:hover {
     color: black;
     text-decoration: none;
+}
+
+#reportRateTable_1 {
+    margin-top: 0px;
+    width: 38%;
+}
+#reportRateTable_2 {
+    margin-top: 0px;
+    width: 40%;
+}
+#reportRateTable_2 table{
+    text-align: center;
+}
+#reportsForRate {
+    display: flex;
+    justify-content: start;
+    flex-wrap:wrap;
+}
+#reportRateTable_3{
+    margin-top: 0px;
+    width: 26%;
 }

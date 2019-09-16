@@ -2,7 +2,7 @@
 <head>
     <title>
     </title>
-    <link rel="stylesheet" href="../style.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/style.css" type="text/css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -18,30 +18,33 @@
 </head>
 <body>
 <header>
-    <h1>Отчёты</h1>
+    <h1>Отчёт по операциям</h1>
 </header>
 <main>
-    <a href="../../index.html">
+    <a href="index.html">
         На главную
     </a>
-    <ul class="list-group">
-        <a href="ratesCur.html">
-            <li class="list-group-item">По курсу валют</li>
-        </a>
-        <a>
-            <li class="list-group-item">По операциям</li>
-        </a>
-        <a>
-            <li class="list-group-item">Morbi leo risus</li>
-        </a>
-        <a>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </a>
-    </ul>
+
+    <div class="exchangeRate" id="reportRateTable_3">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название</th>
+                <th scope="col">Продажа</th>
+                <th scope="col">Покупка</th>
+                <th scope="col">Время</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 </main>
 <footer>
 
 </footer>
+<script src="assets/js/rates.js"></script>
 </body>
 </html>

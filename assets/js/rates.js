@@ -4,11 +4,9 @@ const editRatePurchase = document.getElementById('purchase');
 const editCur = document.getElementById('cur');
 const buttonSaveEdit = document.querySelectorAll('button.btn.btn-secondary')[0];
 let saveQuery;
-// const saveButton = document.querySelector('input[type=submit]');
-// const sale = document.getElementById('sale');
-// const purchase = document.getElementById('purchase');
-//сохранение курса валюты
 const tableOfCurrency = document.getElementsByClassName('table')[0].getElementsByTagName('tbody')[0];
+
+//сохранение курса валюты
 updateListRates = () => {
   fetch('http://exchange.vi/assets/php/rateExchange.phtml').then(result => result.json())
     .then(rates => {
