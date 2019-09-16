@@ -1,5 +1,0 @@
-<?php
-include 'connection.phtml';
-$stm = $pdo->query('SELECT * FROM currency')->fetchAll(PDO::FETCH_ASSOC);
-echo json_encode($stm)
-?>

@@ -18,49 +18,26 @@
 </head>
 <body>
 <header>
-    <h1>Валютно-обменные операция</h1>
+    <h1>Валютно-обменные операции</h1>
 </header>
 <main>
-    <!-- Modal -->
-    <!--<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"-->
-    <!--aria-hidden="true">-->
-    <!--<div class="modal-dialog modal-sm">-->
-    <!--<div class="modal-content">-->
-    <!--<div id="editCurrency">-->
-    <!--<h4>Редактирование курса</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="newCurrency">-->
-    <!--<span><h2>Добавление новой валюты</h2></span>-->
-    <!--<form>-->
-    <!--<div class="field">-->
-    <!--<label for="currency">Код валюты</label>-->
-    <!--<select id="currency">-->
-    <!--</select>-->
-    <!--</div>-->
-    <!--<div class="field">-->
-    <!--<label for="sale">Продажа</label><input type="text" id="sale">-->
-    <!--</div>-->
-    <!--<div class="field"><label for="purchase">Покупка</label><input type="text" id="purchase">-->
-    <!--</div>-->
-    <!--<div class="field"><input type="submit" value="Сохранить"></div>-->
-    <!--</form>-->
-    <!--</div>-->
-    <ul>
-        <li class="list-group-item"><label for="currency">Код валюты:</label>
-            <select id="currency">
-            </select>
-        </li>
-        <li class="list-group-item"><label for="rate">Курс валюты:</label><span id="rate"></span></li>
-        <li class="list-group-item"><label for="type">Тип операции:</label><select id="type">
-            <option value="sale">Покупка</option>
-            <option value="purchase">Продажа</option>
-        </select></li>
-        <li class="list-group-item"><label for="sum">Сумма:</label><input type="text" id="sum"></li>
-        <li class="list-group-item"><label for="amount">Итог:</label><input type="text" id="amount"></li>
-    </ul>
+    <div id="operations">
+        <ul>
+            <li><label for="currency">Код валюты:</label>
+                <select id="currency">
+                </select>
+            </li>
+            <li><label for="rate">Курс валюты:</label><span id="rate"></span></li>
+            <li><label for="type">Тип операции:</label><select id="type">
+                <option value="sale">Продажа</option>
+                <option value="purchase">Покупка</option>
+            </select></li>
+            <li><label for="sum">Сумма:</label><input type="text" id="sum"></li>
+            <li><label for="amount">Итог:</label><span id="amount"></span>
+                <button id="calculation" type="button" class="btn btn-outline-secondary">Рассчитать</button>
+            </li>
+        </ul>
+    </div>
 </main>
 <footer>
 

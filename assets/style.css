@@ -34,8 +34,11 @@ form {
 }
 
 span {
+    display: inline-block;
     text-align: center;
-    color: red;
+    border-bottom: 1px #cecece solid;
+    margin-left: 10px;
+    width: 74px;
 }
 
 .field span {
@@ -62,7 +65,26 @@ div.field label {
 .editCurrency h4 {
     margin: 0 auto
 }
-li{
+
+ul li {
     display: inline;
-    width: 220px;
+    width: 300px;
+    margin-left: 20px;
+}
+
+li label {
+    font: 18pt Serif;
+}
+
+li input {
+    margin-left: 10px;
+}
+
+#calculation {
+    margin-left: 20px;
+}
+
+#operations {
+    text-align: center;
+    margin-top: 169px;
 }

@@ -1,25 +1,61 @@
 //получение элементов страницы и объявление переменных
 const selectCur = document.getElementById('currency');
 const rate = document.querySelector('#rate');
+const typeRate = document.getElementById('type');
+const calculation = document.getElementById('calculation');
+const amount = document.getElementById('amount');
+const sum = document.getElementById('sum');
+
 //Подключение списка валют в выпадающий список
 fetch('http://exchange.vi/assets/php/rateExchange.phtml').then(res => res.json())
   .then(list => {
-    console.log(list);
     list.forEach((elem) => {
       selectCur.appendChild(new Option(elem['code'], elem['currency_id']))
     });
-    const definitionSelectedElement = () => {
+    const definitionSelectedRate = () => {
       for (let i = 0; i < selectCur.options.length; i++) {
         if (selectCur.options[i].selected) {
-         let row= list.filter((elem) => {
-            return parseInt(elem['currency_id'])=== parseInt(selectCur.options[i].value)
+          let row = list.filter((elem) => {
+            return parseInt(elem['currency_id']) === parseInt(selectCur.options[i].value)
           });
-         rate.innerText=row[0]['sale'];
+          rate.setAttribute('id_cur',row[0].id)
+          switch (typeRate.value) {
+            case 'sale':
+              rate.innerHTML = row[0]['sale'];
+              break;
+            case 'purchase':
+              rate.innerHTML = row[0]['purchase'];
+              break
+          }
         }
       }
     };
-    definitionSelectedElement();
+    definitionSelectedRate();
     selectCur.addEventListener('change', () => {
-      definitionSelectedElement();
+      definitionSelectedRate();
+      amount.innerText = '';
+    });
+    typeRate.addEventListener('change', () => {
+      definitionSelectedRate();
+      amount.innerText = '';
     })
   });
+
+//расчёт
+calculation.addEventListener('click', () => {
+  amount.innerText = sum.value * rate.innerText;
+  fetch('http://exchange.vi/assets/php/logOperations.phtml', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      exchange_id: rate.getAttribute('id_cur'),
+      amountVal: sum.value,
+      typeVal: typeRate.value,
+    })
+  })
+});
+sum.addEventListener('focus', () => {
+  amount.innerText = '';
+});
