@@ -117,7 +117,7 @@ li input {
 
 #reportRateTable_1 {
     margin-top: 0px;
-    width: 38%;
+    width: 617px;
 }
 #reportRateTable_2 {
     margin-top: 0px;
@@ -128,8 +128,8 @@ li input {
 }
 #reportsForRate {
     display: flex;
-    justify-content: start;
-    flex-wrap:wrap;
+    justify-content: space-around;
+    flex-wrap:nowrap;
 }
 #reportRateTable_3{
     margin-top: 0px;
@@ -139,6 +139,18 @@ li input {
     width:37%;
     margin-top: 0px;
 }
+#reportRateTable_5{
+    width:37%;
+    margin-top: 0px;
+}
 header div{
     text-align: left;
+}
+.table.reports{
+    width: 75%;
+}
+.operationsRep{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:nowrap;
 }

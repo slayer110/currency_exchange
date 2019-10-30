@@ -47,7 +47,7 @@ calculation.addEventListener('click', () => {
     return
   }
   amount.innerText = sum.value * rate.innerText;
-  fetch('http://exchange.vi/assets/php/logOperations.php', {
+  fetch('http://exchange.vi/assets/php/operationRecord.php', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
